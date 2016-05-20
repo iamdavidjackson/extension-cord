@@ -1,0 +1,31 @@
+{
+  "name": "extension-cord",
+  "version": "1.0.0",
+  "description": "A proxy for serving static assets from a remote location.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamdavidjackson/extension-cord.git"
+  },
+  "keywords": [
+    "express",
+    "middleware",
+    "proxy",
+    "static"
+  ],
+  "author": "David Jackson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamdavidjackson/extension-cord/issues"
+  },
+  "homepage": "https://github.com/iamdavidjackson/extension-cord#readme",
+  "dependencies": {
+    "http-proxy": "^1.13.3",
+    "lodash": "^4.12.0",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
+  }
+}
