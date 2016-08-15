@@ -15,3 +15,13 @@ app.use(require('extension-cord')({
     },
     "regex": "jpeg|gif|png|jpg|js|css|ico|woff|svg|ttf|json|map"
 }));
+
+
+## CHANGELOG
+
+###1.0
+Initial release with basic functionality.
+
+###1.1
+Added all the events that are supported: onOpen, onClose, onError, onProxyReq, onProxyRes.
+ 

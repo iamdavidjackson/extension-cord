@@ -17,10 +17,26 @@ var ExtensionCord = function(options) {
 		target: url.format(options.target),
 		changeOrigin: options.changeOrigin || true
 	});
+	
+	if (typeof options.onOpen === 'function') {
+		proxy.on('open', options.onOpen);
+	}
 
-	proxy.on('error', function(err, req, res) {
-		console.log(err);
-	});
+	if (typeof options.onClose === 'function') {
+		proxy.on('close', options.onClose);
+	}
+
+	if (typeof options.onError === 'function') {
+		proxy.on('error', options.onError);
+	}
+
+	if (typeof options.onProxyReq === 'function') {
+		proxy.on('proxyReq', options.onProxyReq);
+	}
+
+	if (typeof options.onProxyRes === 'function') {
+		proxy.on('proxyRes', options.onProxyRes);
+	}
 
 	var regExp = new RegExp('\.(' + options.regex + ')$', 'i');
 	
